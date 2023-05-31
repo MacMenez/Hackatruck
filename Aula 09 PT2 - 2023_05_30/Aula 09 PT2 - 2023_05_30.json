@@ -1,0 +1,100 @@
+[
+    {
+        "id": "686b413f704524cf",
+        "type": "tab",
+        "label": "Aula 09 PT2- 2023_05_30",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "429afa7c3aeb7eef",
+        "type": "microphone",
+        "z": "686b413f704524cf",
+        "name": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "14d4ccb24931438c"
+            ]
+        ]
+    },
+    {
+        "id": "14d4ccb24931438c",
+        "type": "watson-speech-to-text",
+        "z": "686b413f704524cf",
+        "name": "vozNarrador",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "BroadbandModel",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "vh8qUF7VDZuQQIPF6NMTH0vk_HeRzjxxojBUdkt2ZS6H",
+        "payload-response": true,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/924b16f9-f252-4ad6-b15b-cf14761806ac",
+        "x": 290,
+        "y": 80,
+        "wires": [
+            [
+                "09be1ea35a84b66e"
+            ]
+        ]
+    },
+    {
+        "id": "5616c29d96da3643",
+        "type": "debug",
+        "z": "686b413f704524cf",
+        "name": "fraseDitaEscrita",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "transcription",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "09be1ea35a84b66e",
+        "type": "cloudantplus out",
+        "z": "686b413f704524cf",
+        "name": "",
+        "cloudant": "90a309d608c84f79",
+        "database": "tigrao",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "5616c29d96da3643"
+            ]
+        ]
+    },
+    {
+        "id": "90a309d608c84f79",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-1oyyl44w0ka2aw9z3fvb53wag6o79wi8boxf0xsbnpr:6c078caec78a17bbd953a16fff300224@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "tigrao",
+        "useapikey": true
+    }
+]
