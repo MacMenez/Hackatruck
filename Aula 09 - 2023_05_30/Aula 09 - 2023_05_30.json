@@ -1,0 +1,126 @@
+[
+    {
+        "id": "4fd07f90cba740a1",
+        "type": "inject",
+        "z": "04bbf15de9160ae9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Que A Forca Esteja com Voce",
+        "payloadType": "str",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "b98de31b0fde3ca9"
+            ]
+        ]
+    },
+    {
+        "id": "b98de31b0fde3ca9",
+        "type": "watson-text-to-speech",
+        "z": "04bbf15de9160ae9",
+        "name": "VozDoUniverso",
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "voice": "pt-BR_IsabelaV3Voice",
+        "voicehidden": "",
+        "format": "audio/wav",
+        "password": "",
+        "apikey": "OA18zA8oJxflF2ti16Rz5BLiiRTevxJL9CWU5eAvSLU-",
+        "payload-response": false,
+        "service-endpoint": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/cf6b4b16-9b56-40af-af58-abb6339f7a8f",
+        "x": 320,
+        "y": 100,
+        "wires": [
+            [
+                "5fe1f01534af8804"
+            ]
+        ]
+    },
+    {
+        "id": "5fe1f01534af8804",
+        "type": "play audio",
+        "z": "04bbf15de9160ae9",
+        "name": "",
+        "voice": "123",
+        "x": 530,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "90c6349ed3a61378",
+        "type": "microphone",
+        "z": "04bbf15de9160ae9",
+        "name": "",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "6889676956af529d"
+            ]
+        ]
+    },
+    {
+        "id": "6889676956af529d",
+        "type": "watson-speech-to-text",
+        "z": "04bbf15de9160ae9",
+        "name": "",
+        "alternatives": 1,
+        "speakerlabels": true,
+        "smartformatting": false,
+        "lang": "pt-BR",
+        "langhidden": "pt-BR",
+        "langcustom": "NoCustomisationSetting",
+        "langcustomhidden": "",
+        "custom-weight": "0.5",
+        "band": "BroadbandModel",
+        "bandhidden": "",
+        "keywords": "",
+        "keywords-threshold": "0.5",
+        "word-confidence": false,
+        "password": "",
+        "apikey": "vh8qUF7VDZuQQIPF6NMTH0vk_HeRzjxxojBUdkt2ZS6H",
+        "payload-response": false,
+        "streaming-mode": false,
+        "streaming-mute": true,
+        "auto-connect": false,
+        "discard-listening": false,
+        "disable-precheck": false,
+        "service-endpoint": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/924b16f9-f252-4ad6-b15b-cf14761806ac",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "46d1b4b0361548e9"
+            ]
+        ]
+    },
+    {
+        "id": "46d1b4b0361548e9",
+        "type": "debug",
+        "z": "04bbf15de9160ae9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "transcription",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
+        "wires": []
+    }
+]
