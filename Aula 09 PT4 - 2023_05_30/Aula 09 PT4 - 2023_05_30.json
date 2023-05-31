@@ -1,0 +1,100 @@
+[
+    {
+        "id": "193af4327ce611ae",
+        "type": "tab",
+        "label": "Aula 09 PT4 - 2023_05_30",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f396419f8fc72afa",
+        "type": "debug",
+        "z": "193af4327ce611ae",
+        "name": "fraseDitaEscrita",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "58b718f755d8bf04",
+        "type": "split",
+        "z": "193af4327ce611ae",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "abea7f951444796c"
+            ]
+        ]
+    },
+    {
+        "id": "abea7f951444796c",
+        "type": "cloudantplus out",
+        "z": "193af4327ce611ae",
+        "name": "",
+        "cloudant": "90a309d608c84f79",
+        "database": "tigrao",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "9e11f8382caf8988",
+                "f396419f8fc72afa"
+            ]
+        ]
+    },
+    {
+        "id": "9e11f8382caf8988",
+        "type": "http response",
+        "z": "193af4327ce611ae",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b8cb60a6660e8a7d",
+        "type": "http in",
+        "z": "193af4327ce611ae",
+        "name": "",
+        "url": "/enviandoDocumento",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "58b718f755d8bf04"
+            ]
+        ]
+    },
+    {
+        "id": "90a309d608c84f79",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-1oyyl44w0ka2aw9z3fvb53wag6o79wi8boxf0xsbnpr:6c078caec78a17bbd953a16fff300224@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "tigrao",
+        "useapikey": true
+    }
+]
