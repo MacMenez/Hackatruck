@@ -1,0 +1,45 @@
+[
+    {
+        "id": "647fb934c8925b6d",
+        "type": "ibmiot in",
+        "z": "27c7bffc1ebf036a",
+        "authentication": "apiKey",
+        "apiKey": "d05c27d53981e171",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "localizacaoGPS",
+        "applicationId": "",
+        "deviceType": "+",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": "",
+        "allApplications": "",
+        "allDeviceTypes": true,
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "fb9d3698ec75f3b0"
+            ]
+        ]
+    },
+    {
+        "id": "d05c27d53981e171",
+        "type": "ibmiot",
+        "name": "Baymax",
+        "keepalive": "60",
+        "serverName": "lcj8oh.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    }
+]
