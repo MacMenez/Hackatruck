@@ -23,14 +23,13 @@ Tela de Monitoramento Cardiaco |
 Tela de Analise de Saude | 
 
 ## Codigos de referencias
-[Calendario]() - Contem um calendario semanal pronto com referencias de icones que serao utilizados.
-
-[Teste]() - Contem graficos de linhas e barra
+- [Calendario]() - Contem um calendario semanal pronto com referencias de icones que serao utilizados.
+- [Teste]() - Contem graficos de linhas e barra
 
 ## Links de Pesquisa
-[Localizacoa do Usuario](https://developer.apple.com/documentation/applemapsserverapi/userlocation/)
-[Criando Graficos](https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts#Define-the-data-source)
-[Data e Hora](https://developer.apple.com/documentation/foundation/dateformatter/)
-[Calendario](https://developer.apple.com/documentation/swiftui/multidatepicker)
-[Calendario 2](https://www.hackingwithswift.com/books/ios-swiftui/working-with-dates)
+- [Localizacoa do Usuario](https://developer.apple.com/documentation/applemapsserverapi/userlocation/)
+- [Criando Graficos](https://developer.apple.com/documentation/charts/creating-a-chart-using-swift-charts#Define-the-data-source)
+- [Data e Hora](https://developer.apple.com/documentation/foundation/dateformatter/)
+- [Calendario](https://developer.apple.com/documentation/swiftui/multidatepicker)
+- [Calendario 2](https://www.hackingwithswift.com/books/ios-swiftui/working-with-dates)
 
