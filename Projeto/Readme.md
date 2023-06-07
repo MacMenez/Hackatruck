@@ -18,7 +18,13 @@ Victor Ferraz | Design de Tela + Hardware
 
 | Descrição | Etapa |
 |-------------|---------|
-Tela de Calendário de Remédios |
+| Tela Principal | 25% |
+| Tela de Comportamento | 0%
+| Tela de Monitoramento de Remedios| 0%
+| Analise de Perfil| 0%
+| Prototipo de Hardware | 0%
+
+| Tela de Calendário de Remédios |
 Tela de Monitoramento Cardiaco |
 Tela de Analise de Saude | 
 
