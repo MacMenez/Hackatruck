@@ -1,4 +1,9 @@
 # VovôBoys
+Aplicativo de monitoramento de saúde com integração a uma caixa de remédios. Um aplicativo para monitoramento e controle de saúde.
+
+Em determinado momento passamos o foco em pessoas com Alzaimer, com um aplicativo semelhante ao Duolinguo, que iria auxiliar pessoas a lembrarem seus dados e informacoes conforme orientacoes.
+
+
 [Link de telas no FIGMA](https://www.figma.com/file/vAq9iio1SuAw3RXxvvGjIp/Untitled?type=design&node-id=0%3A1&t=n3GMXfgFxHdA8IfB-1)
 
 # DESAFIO - TELA EXTRA
