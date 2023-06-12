@@ -1,0 +1,270 @@
+[
+    {
+        "id": "852b20ae29cb2ed1",
+        "type": "tab",
+        "label": "HTTP Request",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2b8675488953a41b",
+        "type": "http in",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "url": "/get",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "c8228be7e11ce4da"
+            ]
+        ]
+    },
+    {
+        "id": "6edc05d896c29977",
+        "type": "http response",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "61cfaac6c2211e38",
+        "type": "debug",
+        "z": "852b20ae29cb2ed1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d238950323ea4c45",
+        "type": "http in",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "url": "/post",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "96bba0c0d095be01"
+            ]
+        ]
+    },
+    {
+        "id": "bdc62de31ef9512e",
+        "type": "http response",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "0f1a10298391e729",
+        "type": "debug",
+        "z": "852b20ae29cb2ed1",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "96bba0c0d095be01",
+        "type": "cloudantplus out",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "bdc62de31ef9512e",
+                "0f1a10298391e729"
+            ]
+        ]
+    },
+    {
+        "id": "f2d99206437cc872",
+        "type": "http in",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "url": "/monstrosput",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "c06934b2721c5826"
+            ]
+        ]
+    },
+    {
+        "id": "751aad75d99fb513",
+        "type": "http response",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5b24ac642d45f81b",
+        "type": "debug",
+        "z": "852b20ae29cb2ed1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c06934b2721c5826",
+        "type": "cloudantplus out",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "751aad75d99fb513",
+                "5b24ac642d45f81b"
+            ]
+        ]
+    },
+    {
+        "id": "3045c6c4aa4df2f4",
+        "type": "http in",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "url": "/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 560,
+        "wires": [
+            [
+                "b0cc350463c528bc"
+            ]
+        ]
+    },
+    {
+        "id": "cdcc5ac66b84e261",
+        "type": "http response",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ce5e347f1df2c7ca",
+        "type": "debug",
+        "z": "852b20ae29cb2ed1",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "b0cc350463c528bc",
+        "type": "cloudantplus out",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "cdcc5ac66b84e261",
+                "ce5e347f1df2c7ca"
+            ]
+        ]
+    },
+    {
+        "id": "c8228be7e11ce4da",
+        "type": "cloudantplus in",
+        "z": "852b20ae29cb2ed1",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "6edc05d896c29977",
+                "61cfaac6c2211e38"
+            ]
+        ]
+    },
+    {
+        "id": "8dabf94862d5b9bd",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-xqmwqcwxzw39a34csad7x4mhe9k08798uohg4ihq9o7:40f8a5b2dea8e8dd04aee009c2247092@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "Victor",
+        "useapikey": true
+    }
+]
