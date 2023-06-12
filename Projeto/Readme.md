@@ -36,6 +36,8 @@ Tela de Analise de Saude |
 ## Codigos de referencias
 - [Calendario]() - Contem um calendario semanal pronto com referencias de icones que serao utilizados.
 - [Teste]() - Contem graficos de linhas e barra
+- [RemedyList]() - Contem o código para gerar a lista de remédios com o cronometro
+- [PieChart]() - Contém o gráfico responsável pela análise da saúde do paciente.
 
 ## Links de Pesquisa
 - [Localizacoa do Usuario](https://developer.apple.com/documentation/applemapsserverapi/userlocation/)
