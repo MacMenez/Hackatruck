@@ -1,143 +1,108 @@
 //
 //  ContentView.swift
-//  PieChart
+//  RemedyList
 //
 //  Created by Student05 on 12/06/23.
 //
 
-//CÓDIGO DO GRÁFICO DE DOENÇAS OU OBSERVAÇÕES DE SAÚDE DOS IDOSOS
-
+//CÓDIGO PARA GERAR A LISTA DE REMÉDIOS E FAZER A CONTAGEM REGRESSIVA PARA CADA REMÉDIO
 import SwiftUI
 
 struct ContentView: View {
-    //Armazenará os dados obtidos da API externa
-    @State private var data: [ChartData] = []
+    //Representa um item da lista
+    @State private var items: [CountdownItem] = [
+        CountdownItem(name: "Tarefa 1", duration: 100, action: { print("Ação realizada para Tarefa 1!") }),
+        CountdownItem(name: "Tarefa 2", duration: 200, action: { print("Ação realizada para Tarefa 2!") }),
+        CountdownItem(name: "Tarefa 3", duration: 150, action: { print("Ação realizada para Tarefa 3!") })
+    ]
     
     var body: some View {
-        /*Exibe uma mensagem de carregamento caso data esteja vazio.
-        Caso contrário, exibimos o PieChartView passando os dados obtidos.*/
-        VStack {
-            if data.isEmpty {
-                Text("Carregando dados...")
-                    .font(.title)
-                    .padding()
-            } else {
-                PieChartView(data: data)
-                    .aspectRatio(1, contentMode: .fit)
-                    .padding()
-            }
-        }
-        .onAppear {
-            fetchData()
+        List(items) { item in
+            CountdownItemView(item: item)
         }
     }
-    
-    //Responsável por fazer a chamada à API e decodificar os dados recebidos.
-    private func fetchData() {
+}
 
-        guard let url = URL(string: "https://example.com/api/data" /*URL pela sua própria URL da API.*/) else {
-            return
+
+
+struct CountdownItemView: View {
+    @State private var isAlertPresented = false //Controlar a exibição de um alerta quando o tempo se esgota
+    @ObservedObject var item: CountdownItem
+    
+    var body: some View {
+        VStack {
+            Text(item.name)
+                .font(.headline)
+            
+            Text(item.timeString)
+                .font(.title)
+                .padding(.bottom, 20)
+                .onAppear {
+                    item.startCountdown { didPerformAction in
+                        if didPerformAction {
+                            DispatchQueue.main.async {
+                                item.reset()
+                            }
+                        } else {
+                            isAlertPresented = true
+                        }
+                    }
+                }
         }
+        .alert(isPresented: $isAlertPresented) {
+            Alert(title: Text("Alerta"), message: Text("Tempo encerrado sem ação realizada."), dismissButton: .default(Text("OK")))
+        }
+    }
+}
+
+class CountdownItem: ObservableObject, Identifiable {
+    let id = UUID()
+    let name: String
+    let duration: TimeInterval
+    let action: () -> Void
+    var timer : Timer
+    
+    //Tempo restante em segundos (remainingTime)
+    @Published private var remainingTime: TimeInterval = 0
+    var timeString: String {
+        let hours = Int(remainingTime) / 3600
+        let minutes = (Int(remainingTime) % 3600) / 60
+        let seconds = Int(remainingTime) % 60
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+    }
+    
+    init(name: String, duration: TimeInterval, action: @escaping () -> Void) {
+        self.name = name
+        self.duration = duration
+        self.action = action
+        self.timer = Timer()
+    }
+    
+    //Iniciar a contagem regressiva
+    func startCountdown(completion: @escaping (Bool) -> Void) {
+        remainingTime = duration
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
+            [weak self] _ in guard let self = self else {
                 return
             }
             
-            do {
-                let decodedData = try JSONDecoder().decode([ChartData].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.data = decodedData
-                }
-            } catch {
-                print("Erro ao decodificar os dados:", error)
+            if self.remainingTime > 0 {
+                self.remainingTime -= 1
+            } else {
+                self.timer.invalidate()
+                self.action()
+                completion(true)
             }
         }
-        .resume()
-    }
-}
-
-struct PieChart  {
-   
-    let data: [ChartData]
-    
-    var wedges: [Wedge] {
-        let total = data.reduce(0) { $0 + $1.value }
         
-        var startAngle: Double = 0
-        var endAngle: Double = 0
-        
-        return data.map { item in
-            let percentage = item.value / total
-            
-            endAngle = startAngle + 360 * percentage
-            
-            let wedge = Wedge(startAngle: Angle(degrees: startAngle), endAngle: Angle(degrees: endAngle), color: .red)
-            
-            startAngle = endAngle
-            
-            return wedge
-        }
+        timer.fire()
+    }
+    //Reiniciar o cronômetro.
+    func reset() {
+        remainingTime = duration
     }
 }
-
-struct Wedge : Identifiable {
-    let id = UUID()
-    let startAngle: Angle
-    let endAngle: Angle
-    let color: Color
-}
-
-//Responsável por exibir o gráfico de setores.
-struct PieChartView: View {
-    let data: [ChartData]
-    
-    var body: some View {
-        //GeometryReader para obter o tamanho disponível
-        GeometryReader { geometry in
-            //Instância da estrutura PieChart, que é responsável por calcular as fatias (wedges) do gráfico com base nos dados recebidos.
-            let radius = min(geometry.size.width, geometry.size.height) / 2
-            let pieChart = PieChart(data: data)
-            
-            ZStack {
-                ForEach(pieChart.wedges) { wedge in
-                    Path { path in
-                        path.move(to: CGPoint(x: radius, y: radius))
-                        path.addArc(center: CGPoint(x: radius, y: radius), radius: radius, startAngle: wedge.startAngle, endAngle: wedge.endAngle, clockwise: false)
-                    }
-                    .fill(wedge.color)
-                }
-                
-                VStack {
-                    Text("Gráfico de Setores")
-                        .font(.title)
-                        .padding()
-                    //Percorrer os índices dos dados e acessar tanto o rótulo quanto o valor correspondente a cada fatia.
-                    ForEach(data.indices) { index in
-                        HStack {
-                            Circle() //Representar a cor da fatia
-                                //.foregroundColor(data[index].color)
-                                .frame(width: 12, height: 12)
-                            
-                            Text("\(data[index].label): \(data[index].value)%")//Representar o texto da fatia
-                                .font(.headline)
-                        }
-                        .padding(.bottom, 8)
-                    }
-                }
-            }
-        }
-    }
-}
-
-//Representar os dados recebidos da API. Adota os protocolos Codable e Identifiable.
-struct ChartData: Codable, Identifiable {
-    let id: UUID = UUID()
-    let label: String
-    let value: Double
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
