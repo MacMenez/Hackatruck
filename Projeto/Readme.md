@@ -25,9 +25,9 @@ Victor Ferraz | Design de Tela + Hardware
 |-------------|---------|
 | Tela Principal | 25% |
 | Tela de Comportamento | 0%
-| Tela de Monitoramento de Remedios| 0%
-| Analise de Perfil| 0%
-| Prototipo de Hardware | 0%
+| Tela de Monitoramento de Remedios| 70%
+| Analise de Perfil| 20%
+| Prototipo de Hardware | 85%
 
 | Tela de Calendário de Remédios |
 Tela de Monitoramento Cardiaco |
