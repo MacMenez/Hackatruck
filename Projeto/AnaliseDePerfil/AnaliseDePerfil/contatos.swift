@@ -13,5 +13,5 @@ struct Contato : Identifiable
     var nome: String
     var parentesco: String
     var telefone: String
-    var foto: String
+ 
 }

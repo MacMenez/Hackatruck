@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30156A22A3A350C00F3F9FF /* CadastrarContato.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30156A12A3A350C00F3F9FF /* CadastrarContato.swift */; };
 		F3F282E22A38E01D00AF4E65 /* AnaliseDePerfilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F282E12A38E01D00AF4E65 /* AnaliseDePerfilApp.swift */; };
 		F3F282E42A38E01D00AF4E65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F282E32A38E01D00AF4E65 /* ContentView.swift */; };
 		F3F282E62A38E01D00AF4E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F282E52A38E01D00AF4E65 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F30156A12A3A350C00F3F9FF /* CadastrarContato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastrarContato.swift; sourceTree = "<group>"; };
 		F3F282DE2A38E01D00AF4E65 /* AnaliseDePerfil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnaliseDePerfil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F282E12A38E01D00AF4E65 /* AnaliseDePerfilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseDePerfilApp.swift; sourceTree = "<group>"; };
 		F3F282E32A38E01D00AF4E65 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				F3F282E52A38E01D00AF4E65 /* Assets.xcassets */,
 				F3F282E72A38E01D00AF4E65 /* Preview Content */,
 				F3F282EF2A38FB8200AF4E65 /* contatos.swift */,
+				F30156A12A3A350C00F3F9FF /* CadastrarContato.swift */,
 			);
 			path = AnaliseDePerfil;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				F3F282E42A38E01D00AF4E65 /* ContentView.swift in Sources */,
 				F3F282E22A38E01D00AF4E65 /* AnaliseDePerfilApp.swift in Sources */,
+				F30156A22A3A350C00F3F9FF /* CadastrarContato.swift in Sources */,
 				F3F282F02A38FB8200AF4E65 /* contatos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
