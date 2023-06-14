@@ -23,9 +23,9 @@ struct ContentView: View {
     ]
 
     
-    @State var name=""
-    @State var parent=""
-    @State var fone=""
+    @State var name = ""
+    @State var parent = ""
+    @State var fone = ""
     @State private var showingSheet = false
     @State private var showingSheetCadastro = false
 
@@ -93,10 +93,12 @@ struct ContentView: View {
                                             .offset(x:20)
                                             .foregroundColor(.white)
                                         Button(contato.nome) {
-                                            showingSheet.toggle()
                                             name = contato.nome
                                             parent = contato.parentesco
                                             fone = contato.telefone
+                                            
+                                            showingSheet.toggle()
+                                           
                                         }
                                         .font(.title)
                                         .foregroundColor(Color.white)
@@ -104,43 +106,10 @@ struct ContentView: View {
                                         .shadow(radius: 5)
                                         Spacer()}
                                     
+                                   //SHEET INFORMACOES CONTATO
                                     .sheet(isPresented: $showingSheet)
                                     {
-                                        ZStack{
-                                            
-                                            Color(red: 242 / 255, green: 246 / 255, blue: 178 / 255)
-                                            
-                                          
-                                                VStack
-                                                {
-                                                    Spacer()
-                                                    Image(systemName: "person.circle.fill")
-                                                        .font(.system(size: 100))
-                                                        .foregroundColor(Color(red: 212 / 255, green: 120 / 255, blue: 163 / 255))
-                                                    Spacer()
-                                                        .frame(height: 10.0)
-                                                    
-                                                    Text(name)
-                                                        .font(.largeTitle)
-                                                        .fontWeight(.bold)
-                                                        .foregroundColor(Color.black)
-                                                   
-                                                    Text(parent)
-                                                        .font(.title)
-                                                        .fontWeight(.regular)
-                                                        .foregroundColor(Color.black)
-                                                    
-                                                    Text(fone)
-                                                        .font(.title)
-                                                        .fontWeight(.regular)
-                                                        .foregroundColor(Color.black)
-                                                    Spacer()
-                                                    
-                                                    Spacer()
-                                                    
-                                                }
-                                                
-                                            }
+                                        SheetDetailView(nname: $name, pparent: $parent, ffone: $fone)
                                             
                                         }.ignoresSafeArea()
                                     }
@@ -211,4 +180,47 @@ struct ContentView: View {
             ContentView()
         }
     }
+
+struct SheetDetailView: View {
+    @Binding var nname: String
+    @Binding var pparent: String
+    @Binding var ffone: String
+    var body: some View {
+        ZStack{
+            
+            Color(red: 242 / 255, green: 246 / 255, blue: 178 / 255)
+            
+          
+                VStack
+                {
+                    Spacer()
+                    Image(systemName: "person.circle.fill")
+                        .font(.system(size: 100))
+                        .foregroundColor(Color(red: 212 / 255, green: 120 / 255, blue: 163 / 255))
+                    Spacer()
+                        .frame(height: 10.0)
+                    
+                    Text(nname)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black)
+                   
+                    Text(pparent)
+                        .font(.title)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.black)
+                    
+                    Text(ffone)
+                        .font(.title)
+                        .fontWeight(.regular)
+                        .foregroundColor(Color.black)
+                    Spacer()
+                    
+                    Spacer()
+                    
+                }
+                
+            }
+    }
+}
 
