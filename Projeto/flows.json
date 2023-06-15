@@ -8,6 +8,55 @@
         "env": []
     },
     {
+        "id": "b8d7cf5176489ec7",
+        "type": "tab",
+        "label": "HTTP Request",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "30f452cc14a33a75",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-xqmwqcwxzw39a34csad7x4mhe9k08798uohg4ihq9o7:40f8a5b2dea8e8dd04aee009c2247092@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "ArthurCMM",
+        "useapikey": true
+    },
+    {
+        "id": "1d634945a29d9412",
+        "type": "ibmiot",
+        "name": "eu",
+        "keepalive": "60",
+        "serverName": "r3zyee.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "62f9bb1cfaa1e24d",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-2ocjmciahr6sz7l8h2gx9qoz2iohytdl8tit82cz91gn:d3ef3f703fc6c1258dc71ed1c00a4d69@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "arthurmoraes",
+        "useapikey": true
+    },
+    {
+        "id": "6da909b847529f9d",
+        "type": "ibmiot",
+        "name": "arthurmoraes",
+        "keepalive": "60",
+        "serverName": "tm3xkd.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "umidade01",
+        "shared": false
+    },
+    {
+        "id": "8dabf94862d5b9bd",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-xqmwqcwxzw39a34csad7x4mhe9k08798uohg4ihq9o7:40f8a5b2dea8e8dd04aee009c2247092@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "Victor",
+        "useapikey": true
+    },
+    {
         "id": "1bfc7c0ce75d0f1a",
         "type": "http response",
         "z": "73b33ad7cd014af5",
@@ -330,10 +379,256 @@
         ]
     },
     {
-        "id": "30f452cc14a33a75",
-        "type": "cloudantplus",
-        "host": "https://apikey-v2-xqmwqcwxzw39a34csad7x4mhe9k08798uohg4ihq9o7:40f8a5b2dea8e8dd04aee009c2247092@bbd3c0ee-d0c8-455b-bbd3-8d6d996c2c0a-bluemix.cloudantnosqldb.appdomain.cloud",
-        "name": "ArthurCMM",
-        "useapikey": true
+        "id": "dd2b15f86d98fe69",
+        "type": "http in",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "url": "/getRemedios",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "b5c1c6c1322ac0b5"
+            ]
+        ]
+    },
+    {
+        "id": "db77d2ae1e1541dc",
+        "type": "http response",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "b2a6f15f7998cd02",
+        "type": "debug",
+        "z": "b8d7cf5176489ec7",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "f03bd1b3ba6f4e18",
+        "type": "http in",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "url": "/postRemedios",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "b607da9876a054f1"
+            ]
+        ]
+    },
+    {
+        "id": "11422ebd9535e694",
+        "type": "http response",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d634989405915334",
+        "type": "debug",
+        "z": "b8d7cf5176489ec7",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b607da9876a054f1",
+        "type": "cloudantplus out",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "11422ebd9535e694",
+                "d634989405915334"
+            ]
+        ]
+    },
+    {
+        "id": "bafb30e2d1845edf",
+        "type": "http in",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "url": "/editRemedios",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "ba8908eb519a7a8d"
+            ]
+        ]
+    },
+    {
+        "id": "c37184622cac560a",
+        "type": "http response",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d98376dc01fa6948",
+        "type": "debug",
+        "z": "b8d7cf5176489ec7",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ba8908eb519a7a8d",
+        "type": "cloudantplus out",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 450,
+        "y": 440,
+        "wires": [
+            [
+                "c37184622cac560a",
+                "d98376dc01fa6948"
+            ]
+        ]
+    },
+    {
+        "id": "c431cdd43f12a437",
+        "type": "http in",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "url": "/delRemedios",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 560,
+        "wires": [
+            [
+                "f40aa1c4c1a21bbd"
+            ]
+        ]
+    },
+    {
+        "id": "4ee3096bf42d7921",
+        "type": "http response",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9097d15146efdf20",
+        "type": "debug",
+        "z": "b8d7cf5176489ec7",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f40aa1c4c1a21bbd",
+        "type": "cloudantplus out",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "4ee3096bf42d7921",
+                "9097d15146efdf20"
+            ]
+        ]
+    },
+    {
+        "id": "b5c1c6c1322ac0b5",
+        "type": "cloudantplus in",
+        "z": "b8d7cf5176489ec7",
+        "name": "",
+        "cloudant": "8dabf94862d5b9bd",
+        "database": "pato",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "db77d2ae1e1541dc",
+                "b2a6f15f7998cd02"
+            ]
+        ]
     }
 ]
