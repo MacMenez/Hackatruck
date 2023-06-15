@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F22F9D9E2A3B798F002A3BDA /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = F22F9D9D2A3B798F002A3BDA /* iPhoneNumberField */; };
+		F2530CF12A30ECA000D258C9 /* LumiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2530CF02A30ECA000D258C9 /* LumiApp.swift */; };
+		F2530CF32A30ECA000D258C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2530CF22A30ECA000D258C9 /* ContentView.swift */; };
+		F2530CF52A30ECA200D258C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2530CF42A30ECA200D258C9 /* Assets.xcassets */; };
+		F2530CF82A30ECA200D258C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2530CF72A30ECA200D258C9 /* Preview Assets.xcassets */; };
+		F2530D032A37A86F00D258C9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2530D022A37A86F00D258C9 /* SwiftUIView.swift */; };
+		F2530D052A38E07100D258C9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2530D042A38E07100D258C9 /* Home.swift */; };
+		F2F4D1EE2A3A4BAB0008385E /* Cronometro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4D1ED2A3A4BAB0008385E /* Cronometro.swift */; };
+		F2F4D1F02A3A4CD00008385E /* LumiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4D1EF2A3A4CD00008385E /* LumiModel.swift */; };
+		F2F947152A3A2771008C107D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F947142A3A2771008C107D /* MainView.swift */; };
+		F2F947172A3A3650008C107D /* Cadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F947162A3A3650008C107D /* Cadastro.swift */; };
+		F2F947192A3A3EF5008C107D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F947182A3A3EF5008C107D /* LoginView.swift */; };
+		F2F9471B2A3A3F06008C107D /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9471A2A3A3F06008C107D /* FirstView.swift */; };
+		F2F9471D2A3A451F008C107D /* AnaliseDePerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9471C2A3A451F008C107D /* AnaliseDePerfilView.swift */; };
+		F2F9471F2A3A4584008C107D /* CadastroContatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9471E2A3A4584008C107D /* CadastroContatoView.swift */; };
+		F2F947212A3A45AC008C107D /* CadastroContato.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F947202A3A45AC008C107D /* CadastroContato.swift */; };
+		F2F947232A3A493E008C107D /* GraficoSaudeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F947222A3A493E008C107D /* GraficoSaudeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2530CED2A30ECA000D258C9 /* Lumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lumi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2530CF02A30ECA000D258C9 /* LumiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiApp.swift; sourceTree = "<group>"; };
+		F2530CF22A30ECA000D258C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F2530CF42A30ECA200D258C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2530CF72A30ECA200D258C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2530D022A37A86F00D258C9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		F2530D042A38E07100D258C9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F2F4D1ED2A3A4BAB0008385E /* Cronometro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cronometro.swift; sourceTree = "<group>"; };
+		F2F4D1EF2A3A4CD00008385E /* LumiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumiModel.swift; sourceTree = "<group>"; };
+		F2F947142A3A2771008C107D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F2F947162A3A3650008C107D /* Cadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cadastro.swift; sourceTree = "<group>"; };
+		F2F947182A3A3EF5008C107D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F2F9471A2A3A3F06008C107D /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		F2F9471C2A3A451F008C107D /* AnaliseDePerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaliseDePerfilView.swift; sourceTree = "<group>"; };
+		F2F9471E2A3A4584008C107D /* CadastroContatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroContatoView.swift; sourceTree = "<group>"; };
+		F2F947202A3A45AC008C107D /* CadastroContato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroContato.swift; sourceTree = "<group>"; };
+		F2F947222A3A493E008C107D /* GraficoSaudeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraficoSaudeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2530CEA2A30ECA000D258C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22F9D9E2A3B798F002A3BDA /* iPhoneNumberField in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2530CE42A30ECA000D258C9 = {
+			isa = PBXGroup;
+			children = (
+				F2F4D1EF2A3A4CD00008385E /* LumiModel.swift */,
+				F2F4D1ED2A3A4BAB0008385E /* Cronometro.swift */,
+				F2F947222A3A493E008C107D /* GraficoSaudeView.swift */,
+				F2F947202A3A45AC008C107D /* CadastroContato.swift */,
+				F2F9471E2A3A4584008C107D /* CadastroContatoView.swift */,
+				F2F9471C2A3A451F008C107D /* AnaliseDePerfilView.swift */,
+				F2F9471A2A3A3F06008C107D /* FirstView.swift */,
+				F2F947182A3A3EF5008C107D /* LoginView.swift */,
+				F2F947162A3A3650008C107D /* Cadastro.swift */,
+				F2530D042A38E07100D258C9 /* Home.swift */,
+				F2F947142A3A2771008C107D /* MainView.swift */,
+				F2530D022A37A86F00D258C9 /* SwiftUIView.swift */,
+				F2530CEF2A30ECA000D258C9 /* Lumi */,
+				F2530CEE2A30ECA000D258C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2530CEE2A30ECA000D258C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2530CED2A30ECA000D258C9 /* Lumi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2530CEF2A30ECA000D258C9 /* Lumi */ = {
+			isa = PBXGroup;
+			children = (
+				F2530CF02A30ECA000D258C9 /* LumiApp.swift */,
+				F2530CF22A30ECA000D258C9 /* ContentView.swift */,
+				F2530CF42A30ECA200D258C9 /* Assets.xcassets */,
+				F2530CF62A30ECA200D258C9 /* Preview Content */,
+			);
+			path = Lumi;
+			sourceTree = "<group>";
+		};
+		F2530CF62A30ECA200D258C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F2530CF72A30ECA200D258C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2530CEC2A30ECA000D258C9 /* Lumi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2530CFB2A30ECA200D258C9 /* Build configuration list for PBXNativeTarget "Lumi" */;
+			buildPhases = (
+				F2530CE92A30ECA000D258C9 /* Sources */,
+				F2530CEA2A30ECA000D258C9 /* Frameworks */,
+				F2530CEB2A30ECA000D258C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lumi;
+			packageProductDependencies = (
+				F22F9D9D2A3B798F002A3BDA /* iPhoneNumberField */,
+			);
+			productName = Lumi;
+			productReference = F2530CED2A30ECA000D258C9 /* Lumi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2530CE52A30ECA000D258C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F2530CEC2A30ECA000D258C9 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = F2530CE82A30ECA000D258C9 /* Build configuration list for PBXProject "Lumi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2530CE42A30ECA000D258C9;
+			packageReferences = (
+				F22F9D9C2A3B798F002A3BDA /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
+			productRefGroup = F2530CEE2A30ECA000D258C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2530CEC2A30ECA000D258C9 /* Lumi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2530CEB2A30ECA000D258C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2530CF82A30ECA200D258C9 /* Preview Assets.xcassets in Resources */,
+				F2530CF52A30ECA200D258C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2530CE92A30ECA000D258C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F947172A3A3650008C107D /* Cadastro.swift in Sources */,
+				F2F947192A3A3EF5008C107D /* LoginView.swift in Sources */,
+				F2F9471F2A3A4584008C107D /* CadastroContatoView.swift in Sources */,
+				F2F4D1EE2A3A4BAB0008385E /* Cronometro.swift in Sources */,
+				F2530CF32A30ECA000D258C9 /* ContentView.swift in Sources */,
+				F2F9471D2A3A451F008C107D /* AnaliseDePerfilView.swift in Sources */,
+				F2530CF12A30ECA000D258C9 /* LumiApp.swift in Sources */,
+				F2530D052A38E07100D258C9 /* Home.swift in Sources */,
+				F2F9471B2A3A3F06008C107D /* FirstView.swift in Sources */,
+				F2F947212A3A45AC008C107D /* CadastroContato.swift in Sources */,
+				F2F4D1F02A3A4CD00008385E /* LumiModel.swift in Sources */,
+				F2F947232A3A493E008C107D /* GraficoSaudeView.swift in Sources */,
+				F2F947152A3A2771008C107D /* MainView.swift in Sources */,
+				F2530D032A37A86F00D258C9 /* SwiftUIView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F2530CF92A30ECA200D258C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2530CFA2A30ECA200D258C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2530CFC2A30ECA200D258C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lumi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.Lumi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2530CFD2A30ECA200D258C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Lumi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.Lumi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2530CE82A30ECA000D258C9 /* Build configuration list for PBXProject "Lumi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2530CF92A30ECA200D258C9 /* Debug */,
+				F2530CFA2A30ECA200D258C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2530CFB2A30ECA200D258C9 /* Build configuration list for PBXNativeTarget "Lumi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2530CFC2A30ECA200D258C9 /* Debug */,
+				F2530CFD2A30ECA200D258C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F22F9D9C2A3B798F002A3BDA /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F22F9D9D2A3B798F002A3BDA /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F22F9D9C2A3B798F002A3BDA /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F2530CE52A30ECA000D258C9 /* Project object */;
+}
